@@ -21,9 +21,11 @@
 		font-size: 26px;
 		width:100%;
 		padding:10px;
+		transition: all 1s linear 0s;
 
 	} #sidebar li:hover{
 		background:#5E5F61;
+		transition: all 1s linear 0s;
 	}
 
 	#sidebar .sidebar-active {
@@ -39,7 +41,7 @@
 		<li>Dashboard</li>
 		<li class="sidebar-active"><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
 		<li><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
-		<li></li>
+
 	</ul>
 </div>
 

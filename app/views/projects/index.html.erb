@@ -1,4 +1,38 @@
 <style>
+    #sidebar {
+    width:15%;
+    height:100%;
+    position: fixed;
+    background:#333333;
+    float:left;
+    display:block;
+
+  }
+
+  #sidebar ul {
+    width:100%;
+    margin-top:30px;
+  }
+
+  #sidebar li {
+    position: relative;
+    left:-30px;
+    color:white;
+    font-size: 26px;
+    width:100%;
+    padding:10px;
+    transition: all 1s linear 0s;
+
+  } #sidebar li:hover{
+    background:#5E5F61;
+    transition: all 1s linear 0s;
+  }
+
+  #sidebar .sidebar-active {
+    background:#292627;
+  }
+
+
   .mybutton{
     background:#f26271;
     color:white;
@@ -32,11 +66,21 @@
 
 </style>
 
+<div id="sidebar">
+  <%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
+  <div style="width:100%; height:2px; background:#2ABB9B"></div>
+  <ul>
+    <li><%= link_to "Desktop", "http://localhost:3000/", style:"color:white; text-decoration:none"%></li>
+    <li><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
+    <li class="sidebar-active"><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
+  </ul>
+</div>
+
 
 <div class="container">
 
   <h1>Find a Project!</h1>
-
+  <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default", style: "float:left" %></div>
 
   <% @projects.each do |project| %>
     <div class="panel panel-default card">
@@ -67,5 +111,5 @@
 
 
 
-  <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default", style: "float:right" %></div>
+  
 </div>
