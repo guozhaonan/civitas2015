@@ -25,6 +25,9 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    puts "debugging"
+    puts @project.tag_list
+
 
       if @project.save
         flash[:notice] = 'Project was successfully created.'
