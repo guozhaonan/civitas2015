@@ -1,3 +1,6 @@
+<style>
+
+</style>
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -22,18 +25,72 @@
     <%= f.label :partner %><br>
     <%= f.text_field :partner %><br>
 
-    <%= f.label :coreValue1 %><br>
-    <%= f.text_field :coreValue1 %><br>
-
-    <%= f.label :coreValue2 %><br>
-    <%= f.text_field :coreValue2 %><br>
-
-    <%= f.label :coreValue3 %><br>
-    <%= f.text_field :coreValue3 %><br>
-
-    <%= f.label :developingSkills %><br>
-    <%= f.text_field :developingSkills %><br>
-
+    <div class="core-skills">
+      <h3>Core Skills</h3>
+      <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:graphic) %>
+        <%= label_tag(:graphic, "Graphic Design") %><br>
+        <%= check_box_tag(:frontEndDev) %>
+        <%= label_tag(:FrontEndDev, "Front End Dev") %><br>
+        <%= check_box_tag(:android) %>
+        <%= label_tag(:android, "Android") %><br>
+        <%= check_box_tag(:backEndDev) %>
+        <%= label_tag(:backEndDev, "Back End Dev") %><br>
+      </div>
+      <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:iOSDevelopment) %>
+        <%= label_tag(:pet_dog, "iOS Development") %><br>
+        <%= check_box_tag(:photography) %>
+        <%= label_tag(:photography, "Photography") %><br>
+        <%= check_box_tag(:copyWriting) %>
+        <%= label_tag(:copyWriting, "CopyWriting") %><br>
+        <%= check_box_tag(:marketing) %>
+        <%= label_tag(:marketing, "Marketing") %><br>
+      </div>
+        <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:webDesign) %>
+        <%= label_tag(:webDesign, "Web Design") %><br>
+        <%= check_box_tag(:spanish) %>
+        <%= label_tag(:spanish, "Spanish") %><br>
+        <%= check_box_tag(:portuguese) %>
+        <%= label_tag(:portuguese, "Portuguese") %><br>
+        <%= check_box_tag(:woodworking) %>
+        <%= label_tag(:woodworking, "WoodWorking") %><br>
+      </div>
+    </div>
+    <div class="developing-skills">
+      <h3>Developing Skills</h3>
+      <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:graphic) %>
+        <%= label_tag(:graphic, "Graphic Design") %><br>
+        <%= check_box_tag(:frontEndDev) %>
+        <%= label_tag(:FrontEndDev, "Front End Dev") %><br>
+        <%= check_box_tag(:android) %>
+        <%= label_tag(:android, "Android") %><br>
+        <%= check_box_tag(:backEndDev) %>
+        <%= label_tag(:backEndDev, "Back End Dev") %><br>
+      </div>
+      <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:iOSDevelopment) %>
+        <%= label_tag(:pet_dog, "iOS Development") %><br>
+        <%= check_box_tag(:photography) %>
+        <%= label_tag(:photography, "Photography") %><br>
+        <%= check_box_tag(:copyWriting) %>
+        <%= label_tag(:copyWriting, "CopyWriting") %><br>
+        <%= check_box_tag(:marketing) %>
+        <%= label_tag(:marketing, "Marketing") %><br>
+      </div>
+        <div style="display:inline-block;margin-top:20px">
+        <%= check_box_tag(:webDesign) %>
+        <%= label_tag(:webDesign, "Web Design") %><br>
+        <%= check_box_tag(:spanish) %>
+        <%= label_tag(:spanish, "Spanish") %><br>
+        <%= check_box_tag(:portuguese) %>
+        <%= label_tag(:portuguese, "Portuguese") %><br>
+        <%= check_box_tag(:woodworking) %>
+        <%= label_tag(:woodworking, "WoodWorking") %><br>
+      </div>
+    </div>
 
 
 
@@ -41,7 +98,7 @@
     <!-- <%= f.label :tagline %> -->
 
   </div>
-  <div class="mybutton btn btn-lg btn-default">
+
     <%= f.submit %>
-  </div>
+  
 <% end %>
