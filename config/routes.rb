@@ -5,15 +5,17 @@ Civitas2015::Application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  root "pages#home"
+  root "pages#landing"
 
-  
+
   get "profile" => "pages#profile"
 
 
   get "skills" => "pages#skills"
 
   get "skills2" => "pages#skills2"
+
+  get "landing" => "pages#landing"
 
 
 
