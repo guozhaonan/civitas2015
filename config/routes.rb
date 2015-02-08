@@ -9,6 +9,11 @@ Civitas2015::Application.routes.draw do
   get "profile" => "pages#profile"
 
 
+  get "skills" => "pages#skills"
+
+  get "skills2" => "pages#skills2"
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
