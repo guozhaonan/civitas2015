@@ -1,3 +1,48 @@
+<style>
+#sidebar {
+		width:15%;
+		height:100%;
+		position: fixed;
+		background:#333333;
+		float:left;
+		display:block;
+
+	}
+
+	#sidebar ul {
+		width:100%;
+		margin-top: 30px;
+	}
+
+	#sidebar li {
+		position: relative;
+		left:-30px;
+		color:white;
+		font-size: 26px;
+		width:100%;
+		padding:10px;
+
+	} #sidebar li:hover{
+		background:#5E5F61;
+	}
+
+	#sidebar .sidebar-active {
+		background:#292627;
+	}
+
+</style>
+
+<div id="sidebar">
+	<%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
+	<div style="width:100%; height:2px; background:#2ABB9B"></div>
+	<ul>
+		<li>Dashboard</li>
+		<li class="sidebar-active"><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
+		<li><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
+		<li></li>
+	</ul>
+</div>
+
 <div class="container">
 	<h1>New project</h1>
 
