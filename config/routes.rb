@@ -1,6 +1,10 @@
 Civitas2015::Application.routes.draw do
+  resources :projects do
+    resources :tasks
+  end
+
   get '/auth/:provider/callback', to: 'sessions#create'
-  
+
   root "pages#home"
 
 
