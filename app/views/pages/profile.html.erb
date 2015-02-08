@@ -108,6 +108,10 @@
     float:right;
   }
 
+  .bs {
+  	height:520px;
+  }
+
 </style>
 
 <div id="sidebar">
@@ -213,7 +217,7 @@
 		<div class="divider"></div>
 		<div class="recommended-projects">
 
-			<div class="panel panel-default card">
+			<div class="panel panel-default card bs">
 				<div class="panel-body" >
 					<div class="image"></div>
 					<h3>Albert's Photography Project</h3>
@@ -238,7 +242,7 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default card">
+			<div class="panel panel-default card bs">
 				<div class="panel-body" >
 					<div class="image" style="background-image:url(http://archives.quarrygirl.com/wp-content/uploads/2010/05/pokez-flautas-cu-570x402.jpg);"></div>
 					<h3>Brochure for Maria's Authentic Mexican Grill</h3>
@@ -255,6 +259,30 @@
 						<div id="developing-skills" class="tags">
 							
 							<span class="label label-warning">Copywriting</span>
+						</div>
+						<%= link_to "Check it out!", profile_path, class: "mybutton btn btn-lg btn-default" %>
+					</div>
+					<div style="padding:20px 0">
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default card bs">
+				<div class="panel-body" >
+					<div class="image" style="background-image:url(http://upload.wikimedia.org/wikipedia/commons/9/9d/Santa_feconj_Mexico_City.jpg);"></div>
+					<h3>iOS App of Mexico City</h3>
+					<p style="margin-top:10px">Mexico City needs a travel app that showcases pictures of their city. A variety of skills will be 
+						necessary to complete this app, because every screen must be available in multiple languages. The best part of working on 
+						this will be seeing the rich culture of the region.
+					</p>
+					<h3>Project Requirements</h3>
+					<div >
+						<div id="core-skills" class="tags">
+							<span class="label label-primary">Spanish</span>
+						</div>
+						<div id="developing-skills" class="tags">
+							<span class="label label-warning">iOS Development</span>
+							<span class="label label-warning">Photography</span>
 						</div>
 						<%= link_to "Check it out!", profile_path, class: "mybutton btn btn-lg btn-default" %>
 					</div>

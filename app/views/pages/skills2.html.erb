@@ -28,6 +28,10 @@
 	    float:right;
   	}
 
+  	.selected{
+  		border:2px solid red;
+  	}
+
 
 </style>
 
@@ -42,56 +46,69 @@
 	    <p>What new skills do you want to learn? Pick up to 3 skills.</p>
 	    <div class="well" id="allskills">
 
-			<div class="skilltype">
-				<div class="skill">skill</div>
+			<div class="skilltype  selected">
+				<div class="skill">Graphic Design</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">iOS Development</div>
 			</div>
 				
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Web Design</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Front End Dev</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Photography</div>
+			</div>
+
+			<div class="skilltype selected">
+				<div class="skill">Spanish</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Android</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Copywriting</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
-			</div>
-
-			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Portugese</div>
 			</div>
 
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Back End Dev</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Marketing</div>
 			</div>
 
 			<div class="skilltype">
-				<div class="skill">skill</div>
+				<div class="skill">Woodworking</div>
 			</div>
 		</div>
-		<%= link_to "Finish!", profile_path, class: "mybutton btn btn-lg btn-default" %>
+		<%= link_to "Finished!", profile_path, class: "mybutton btn btn-lg btn-default" %>
 	  </div>
 	</div>
 
+<script>
+	var counter=0;
+
+	$( ".skilltype" ).on("click", function() {
+			console.log("click!")
+			console.log(this)
+			if (counter<3) {
+	  			$(this).css({ border: "2px solid black"} );	
+	  			counter++;
+	  		}
+	});
+
+</script>

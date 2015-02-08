@@ -4,7 +4,7 @@
 		border-radius:5px;
 		width:31%;
 		min-width:200px;
-		background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), no-repeat center center fixed;
+		background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(http://graphicdesigns.clbgraphic-designs.com/images/art1.jpg), no-repeat center center fixed;
 		-webkit-background-size: cover;
     	-moz-background-size: cover;
       	-o-background-size: cover;
@@ -26,11 +26,12 @@
 	}
 
 	.mybutton{
-    background:#f26271;
-    color:white;
-    border:none;
-    float:right;
-  }
+	    background:#f26271;
+	    color:white;
+	    border:none;
+	    float:right;
+    }
+
 
 </style>
 
@@ -98,9 +99,20 @@ two core skills.</p>
 	</div>
 
 <script>
+	var counter=0;
+
 	$( ".skilltype" ).on("click", function() {
+<<<<<<< Updated upstream
 
 	  		$(this).css( "border: 2px black" );
+=======
+			console.log("click!")
+			console.log(this)
+			if (counter<2) {
+	  			$(this).css({ border: "2px solid black"} );	
+	  			counter++;
+	  		}
+>>>>>>> Stashed changes
 	});
 
 </script>
