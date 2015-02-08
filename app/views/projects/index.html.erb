@@ -98,10 +98,87 @@
 
   <h1>Find a Project</h1>
   <p>Pick an existing project, or create a new one!</p>
-  <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default" %></div>
+  <div style="display:block;">
+  <%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default" %></div>
   <div class="divider">
+    <div style="block">
+      <div class="panel panel-default card">
+       <div class="panel-body" >
 
-  <div>
+             <div class="image" style="background-image:url(IMAGEURL)"></div>
+               <h2><PROJECT TITLE></h2>
+               <p style="margin-top:10px"><DESCRIPTION></p>
+               <h3>Project Requirements</h3>
+               <div >
+                 <div id="core-skills" class="tags">
+                   <span class="label label-primary">TAG 1</span>
+                   <span class="label label-primary">TAG 2</span>
+                 </div>
+                 <div id="developing-skills" class="tags">
+                   <span class="label label-warning">TAG 3</span>
+
+                 </div>
+               </div>
+               <div style="padding:20px 0">
+                 <div class="mybutton btn btn-lg btn-default">Join</div>
+                 <div style="float:right"><a href="http://lolcats.com">Edit</a>
+                 <a href="facebook.com">Destroy</a></div>
+             </div>
+
+       </div>
+      </div>
+      <div class="panel panel-default card">
+       <div class="panel-body" >
+
+             <div class="image" style="background-image:url(IMAGEURL)"></div>
+               <h2><PROJECT TITLE></h2>
+               <p style="margin-top:10px"><DESCRIPTION></p>
+               <h3>Project Requirements</h3>
+               <div >
+                 <div id="core-skills" class="tags">
+                   <span class="label label-primary">TAG 1</span>
+                   <span class="label label-primary">TAG 2</span>
+                 </div>
+                 <div id="developing-skills" class="tags">
+                   <span class="label label-warning">TAG 3</span>
+
+                 </div>
+               </div>
+               <div style="padding:20px 0">
+                 <div class="mybutton btn btn-lg btn-default">Join</div>
+                 <div style="float:right"><a href="http://lolcats.com">Edit</a>
+                 <a href="facebook.com">Destroy</a></div>
+             </div>
+
+       </div>
+      </div>
+      <div class="panel panel-default card">
+       <div class="panel-body" >
+
+             <div class="image" style="background-image:url(IMAGEURL)"></div>
+               <h2><PROJECT TITLE></h2>
+               <p style="margin-top:10px"><DESCRIPTION></p>
+               <h3>Project Requirements</h3>
+               <div >
+                 <div id="core-skills" class="tags">
+                   <span class="label label-primary">TAG 1</span>
+                   <span class="label label-primary">TAG 2</span>
+                 </div>
+                 <div id="developing-skills" class="tags">
+                   <span class="label label-warning">TAG 3</span>
+
+                 </div>
+               </div>
+               <div style="padding:20px 0">
+                 <div class="mybutton btn btn-lg btn-default">Join</div>
+                 <div style="float:right"><a href="http://lolcats.com">Edit</a>
+                 <a href="facebook.com">Destroy</a></div>
+             </div>
+
+       </div>
+      </div>
+    </div>
+    <div style="display:block">
     <% @projects.each do |project| %>
       <div class="panel panel-default card">
         <div class="panel-body" >
@@ -134,83 +211,4 @@
   </div>
 
 
-</div>
-
-<div class="panel panel-default card">
- <div class="panel-body" >
-
-       <div class="image" style="background-image:url(IMAGEURL)></div>
-       <h2><PROJECT TITLE></h2>
-       <p style="margin-top:10px"><DESCRIPTION></p>
-       <h3>Project Requirements</h3>
-       <div >
-         <div id="core-skills" class="tags">
-           <span class="label label-primary">TAG 1</span>
-           <span class="label label-primary">TAG 2</span>
-         </div>
-         <div id="developing-skills" class="tags">
-           <span class="label label-warning">TAG 3</span>
-
-         </div>
-       </div>
-       <div style="padding:20px 0">
-         <div class="mybutton btn btn-lg btn-default">Join</div>
-         <div style="float:right"><a href="http://lolcats.com">Edit</a>
-         <a href="facebook.com>Destroy</a></div>
-       </div>
-
- </div>
-</div>
-
-
-<div class="panel panel-default card">
- <div class="panel-body" >
-
-       <div class="image" style="background-image:url(IMAGEURL)></div>
-       <h2><PROJECT TITLE></h2>
-       <p style="margin-top:10px"><DESCRIPTION></p>
-       <h3>Project Requirements</h3>
-       <div >
-         <div id="core-skills" class="tags">
-           <span class="label label-primary">TAG 1</span>
-           <span class="label label-primary">TAG 2</span>
-         </div>
-         <div id="developing-skills" class="tags">
-           <span class="label label-warning">TAG 3</span>
-
-         </div>
-       </div>
-       <div style="padding:20px 0">
-         <div class="mybutton btn btn-lg btn-default">Join</div>
-         <div style="float:right"><a href="http://lolcats.com">Edit</a>
-         <a href="facebook.com>Destroy</a></div>
-       </div>
-
- </div>
-</div>
-
-<div class="panel panel-default card">
- <div class="panel-body" >
-
-       <div class="image" style="background-image:url(IMAGEURL)></div>
-       <h2><PROJECT TITLE></h2>
-       <p style="margin-top:10px"><DESCRIPTION></p>
-       <h3>Project Requirements</h3>
-       <div >
-         <div id="core-skills" class="tags">
-           <span class="label label-primary">TAG 1</span>
-           <span class="label label-primary">TAG 2</span>
-         </div>
-         <div id="developing-skills" class="tags">
-           <span class="label label-warning">TAG 3</span>
-
-         </div>
-       </div>
-       <div style="padding:20px 0">
-         <div class="mybutton btn btn-lg btn-default">Join</div>
-         <div style="float:right"><a href="http://lolcats.com">Edit</a>
-         <a href="facebook.com>Destroy</a></div>
-       </div>
-
- </div>
 </div>

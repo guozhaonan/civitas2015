@@ -32,12 +32,56 @@
     background:#a7a9ab;
     margin-bottom:20px;
   }
+  #sidebar {
+    width:15%;
+    height:100%;
+    position: fixed;
+    background:#333333;
+    float:left;
+    display:block;
 
+  }
+
+  #sidebar ul {
+    width:100%;
+    margin-top: 30px;
+  }
+
+  #sidebar li {
+    position: relative;
+    left:-30px;
+    color:white;
+    font-size: 26px;
+
+    width:100%;
+    padding:10px;
+
+
+
+  }
+
+  #sidebar li:hover{
+    background:#666666;
+  }
+
+  #sidebar .sidebar-active {
+    background:#292627;
+  }
 
 
 </style>
 
 
+<div id="sidebar">
+  <%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
+  <div style="width:100%; height:2px; background:#2ABB9B"></div>
+  <ul>
+    <li>Dashboard</li>
+    <li><%= link_to "Create a Project", "http://localhost:3000/projects/new", style: "color:white; text-decoration:none" %></li>
+    <li><%= link_to "Find a Project", "http://localhost:3000/projects/", style: "color:white; text-decoration:none"  %></li>
+
+  </ul>
+</div>
 
 
 <header class="image">
@@ -91,20 +135,20 @@
         </tr>
         <tr>
           <td><%= @project.partner %></td>
-          <td>Herping the derp</td>
-          <td>Derping</td>
-          <td class = "check"><input type="checkbox"></td>
+          <td>Meeting to discuss project</td>
+          <td>None</td>
+          <td class = "check"><input type="checkbox" checked></td>
         </tr>
         <tr>
-          <td>Derp McDerpsome</td>
-          <td>Herping the derp</td>
-          <td>Derping</td>
-          <td class = "check"><input type="checkbox"></td>
+          <td>Mitch Robinson</td>
+          <td>Writing Mockups for iOS App</td>
+          <td>Graphic Design</td>
+          <td class = "check"><input type="checkbox" checked></td>
         </tr>
         <tr>
-          <td>Derp McDerpsome</td>
-          <td>Herping the derp</td>
-          <td>Derping</td>
+          <td>Albert Guo</td>
+          <td>Making the iOS App</td>
+          <td>iOS Development</td>
           <td class="check"><input type="checkbox"></td>
         </tr>
 
@@ -125,8 +169,8 @@
           var progress = (count / total ) *100;
       </script>
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow= progress aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-          60%
+        <div class="progress-bar" role="progressbar" aria-valuenow= progress aria-valuemin="0" aria-valuemax="100" style="width: 67%;">
+          67%
         </div>
       </div>
 
