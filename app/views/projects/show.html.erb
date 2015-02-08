@@ -53,15 +53,15 @@
         <div class="skills">
           <h3>Core skills</h3>
           <div id="core-skills">
-            <span class="label label-primary"><%= @project.coreValue1 %></span>
-            <span class="label label-primary"><%= @project.coreValue2 %></span>
-            <span class="label label-primary"><%= @project.coreValue3 %></span>
+            <span class="label label-primary"><%= project.coreValue1 %></span>
+            <span class="label label-primary"><%= project.coreValue2 %></span>
+            <span class="label label-primary"><%= project.coreValue3 %></span>
           </div>
         </div>
         <div class="skills">
           <h3>Developing skills</h3>
           <div id="dev-skills">
-            <span class="label label-warning"><%= @project.developingSkills %></span>
+            <span class="label label-warning"><%= project.developingSkills %></span>
         </div>
         </div>
         <div id="badges">
@@ -93,19 +93,19 @@
           <td><%= @project.partner %></td>
           <td>Herping the derp</td>
           <td>Derping</td>
-          <td><input type="checkbox" checked></td>
+          <td class = "check"><input type="checkbox" checked></td>
         </tr>
         <tr>
           <td>Derp McDerpsome</td>
           <td>Herping the derp</td>
           <td>Derping</td>
-          <td><input type="checkbox" checked></td>
+          <td class = "check"><input type="checkbox" checked></td>
         </tr>
         <tr>
           <td>Derp McDerpsome</td>
           <td>Herping the derp</td>
           <td>Derping</td>
-          <td><input type="checkbox" checked></td>
+          <td class="check"><input type="checkbox" checked></td>
         </tr>
 
       </table>
@@ -114,8 +114,18 @@
     <h2 style="padding-top:30px">Key Stats</h2>
     <div class="divider"></div>
     <div id="stats">
+      <script type = "text/javascript">
+
+        var table = document.getElemenByClassName("table");
+          table.find('tr').each(function(){
+            $(this).find('td').each(function({
+
+            });
+          });
+          var progress = (count / total ) *100;
+      </script>
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        <div class="progress-bar" role="progressbar" aria-valuenow= progress aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
           60%
         </div>
       </div>
