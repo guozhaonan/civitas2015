@@ -21,6 +21,14 @@
 		padding:10px;
 	}
 
+	.mybutton{
+	    background:#f26271;
+	    color:white;
+	    border:none;
+	    float:right;
+  	}
+
+
 </style>
 
 
@@ -83,7 +91,7 @@
 				<div class="skill">skill</div>
 			</div>
 		</div>
-		<a class="btn btn-lg btn-default" style="background:#f26271; color:white; border:none; float:right">Finished!</a>
+		<%= link_to "Finish!", profile_path, class: "mybutton btn btn-lg btn-default" %>
 	  </div>
 	</div>
 

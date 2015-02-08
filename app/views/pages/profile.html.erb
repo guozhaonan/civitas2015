@@ -86,7 +86,7 @@
   .image{
 
     height:150px;
-    width:90%;
+    width:100%;
     border-radius:5px;
     background:  url(https://ununsplash.imgix.net/photo-1416339426675-1f96fd81b653?fit=crop&fm=jpg&h=800&q=75&w=1050) no-repeat center center;
     -webkit-background-size: cover;
@@ -101,7 +101,12 @@
   }
 
 
-
+	.mybutton{
+    background:#f26271;
+    color:white;
+    border:none;
+    float:right;
+  }
 
 </style>
 
@@ -109,7 +114,7 @@
 	<%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
 	<div style="width:100%; height:2px; background:#2ABB9B"></div>
 	<ul>
-		<li><%= link_to "Dashboard", "http://localhost:3000/", style:"color:white; text-decoration:none"%>></li>
+		<li><%= link_to "Dashboard", "http://localhost:3000/profile", style:"color:white; text-decoration:none"%></li>
 		<li><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
 		<li><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
 	</ul>
@@ -119,24 +124,25 @@
 	<div class="container">
 		<div class="row" style="position:relative; ">
 			<div class="col-md-6">
-				<img class="img-circle" src ="<%= current_user.profile_image %>">
+				<img class="img-circle" style="margin-top:-60px" src ="<%= current_user.profile_image %>">
 				<div class="userinfo">
-					<h3 class="username"><%= current_user.name %></h3>
-					<h5 class="twitterhandle">@<%= current_user.handle %></h5>
+					<h1 class="username"><%= current_user.name %></h3>
+					<h3 class="twitterhandle" style="margin-top:-5px">@<%= current_user.handle %></h5>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="skills">
 					<h3>Core skills</h3>
 					<div id="core-skills">
-						<span class="label label-primary">Primary</span>
-						<span class="label label-primary">Primary</span>
+						<span class="label label-primary">Graphic Design</span>
+						<span class="label label-primary">Front End Development</span>
 					</div>
 				</div>
 				<div class="skills">
 					<h3>Developing skills</h3>
 					<div id="dev-skills">
-						<span class="label label-warning">Warning</span>
+						<span class="label label-warning">Spanish</span>
+						<span class="label label-warning">Photography</span
 					</div>
 				</div>
 				<div id="badges">
@@ -160,21 +166,21 @@
 		        </tr>
 		        <tr>
 		          <td></td>
-		          <td>Task</td>
-		          <td>Description</td>
-		          <td class="small">Completed</td>
+		          <td ><strong>Received a Badge</strong></td>
+		          <td>You recieved a badge in efficiency!</td>
+		          <td class="small">1 hour ago</td>
 		        </tr>
 		        <tr>
 		          <td></td>
-		          <td>Task</td>
-		          <td>Description</td>
-		          <td class="small">Completed</td>
+		          <td><strong>Completed Task</strong></td>
+		          <td>You completed a task in Albert's photography project!</td>
+		          <td class="small">2 hours ago</td>
 		        </tr>
 		        <tr>
 		          <td></td>
-		          <td>Task</td>
-		          <td>Description</td>
-		          <td class="small">Completed</td>
+		          <td><strong>Created a Profile</strong></td>
+		          <td>You created your profile with Construct</td>
+		          <td class="small">8 hours ago</td>
 		        </tr>
 		 	  </table>
 		</div>
@@ -182,27 +188,58 @@
 		<div class="divider"></div>
 		<div class="recommended-projects">
 
-		<div class="panel panel-default card">
-			<div class="panel-body" >
-
-				<div class="image"></div>
-				<h2>Project title</h2>
-				<p style="margin-top:10px">hdshdsfhdshdsf</p>
-				<h3>Project Requirements</h3>
-				<div >
-				<div id="core-skills" class="tags">
-					<span class="label label-primary">Primary</span>
-					<span class="label label-primary">Primary</span>
-				</div>
-				<div id="developing-skills" class="tags">
-					<span class="label label-warning">Warning</span>
-					<span class="label label-warning">Warning</span>
-				</div>
-				</div>
-				<div style="padding:20px 0">
+			<div class="panel panel-default card">
+				<div class="panel-body" >
+					<div class="image"></div>
+					<h2>Albert's Photography Project</h2>
+					<p style="margin-top:10px">For this project, students need to photograph wildlife in the State College area.
+						Unfortunately, since State College is freezing cold most of the year, we need students with a very specific
+						skillset in graphic design and Portugese to properly locate these majestic beasts.
+					</p>
+					<h3>Project Requirements</h3>
+					<div >
+						<div id="core-skills" class="tags">
+							<span class="label label-primary">Graphic Design</span>
+							<span class="label label-primary">Portugese</span>
+						</div>
+						<div id="developing-skills" class="tags">
+							
+							<span class="label label-warning">Photography</span>
+						</div>
+						<%= link_to "Check it out!", profile_path, class: "mybutton btn btn-lg btn-default" %>
+					</div>
+					<div style="padding:20px 0">
+					</div>
 				</div>
 			</div>
-		</div>
+
+			<div class="panel panel-default card">
+				<div class="panel-body" >
+					<div class="image"></div>
+					<h2>Albert's Photography Project</h2>
+					<p style="margin-top:10px">For this project, students need to photograph wildlife in the State College area.
+						Unfortunately, since State College is freezing cold most of the year, we need students with a very specific
+						skillset in graphic design and Portugese to properly locate these majestic beasts.
+					</p>
+					<h3>Project Requirements</h3>
+					<div >
+						<div id="core-skills" class="tags">
+							<span class="label label-primary">Graphic Design</span>
+							<span class="label label-primary">Portugese</span>
+						</div>
+						<div id="developing-skills" class="tags">
+							
+							<span class="label label-warning">Photography</span>
+						</div>
+						<%= link_to "Check it out!", profile_path, class: "mybutton btn btn-lg btn-default" %>
+					</div>
+					<div style="padding:20px 0">
+					</div>
+				</div>
+			</div>
+
+
+
 
 		</div>
 	</div>

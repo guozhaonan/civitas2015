@@ -32,23 +32,49 @@
 		background:#292627;
 	}
 
+	.header-image {
+      background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),url(https://unsplash.imgix.net/photo-1416339442236-8ceb164046f8?q=75&fm=jpg&s=8eb83df8a744544977722717b1ea4d09) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding:100px;
+      color:white;
+    }
+
+    .divider{ 
+	    margin-bottom:30px;
+	    width:100%;
+	    height:1px;
+	    background:#a7a9ab;
+	    margin-bottom:20px;
+    }
+
 </style>
 
 <div id="sidebar">
 	<%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
 	<div style="width:100%; height:2px; background:#2ABB9B"></div>
 	<ul>
-		<li><%= link_to "Dashboard", "http://localhost:3000/", style:"color:white; text-decoration:none"%></li>
+		<li><%= link_to "Dashboard", "http://localhost:3000/profile", style:"color:white; text-decoration:none"%></li>
 		<li class="sidebar-active"><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
 		<li><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
 
 	</ul>
 </div>
 
-<div class="container">
-	<h1>New project</h1>
+<header class="header-image">
+</header>
 
-	<%= render 'form' %>
+<div class="container">
+	<h2>New Project</h2>
+	<div class="divider"></div>
+
+
+	<div>
+		<%= render 'form' %>
+
+	</div>
 
 	<%= link_to 'Back', projects_path %>
 </div>

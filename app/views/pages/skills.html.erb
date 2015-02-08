@@ -25,6 +25,13 @@
 		border: 2px solid #;
 	}
 
+	.mybutton{
+    background:#f26271;
+    color:white;
+    border:none;
+    float:right;
+  }
+
 </style>
 
 
@@ -88,7 +95,13 @@ two core skills.</p>
 				<div class="skill">skill</div>
 			</div>
 		</div>
-		<a class="btn btn-lg btn-default" style="background:#f26271; color:white; border:none; float:right">Almost there!</a>
+		<%= link_to "Almost there!", skills2_path, class: "mybutton btn btn-lg btn-default" %>
 	  </div>
 	</div>
 
+<script>
+	$( ".skilltype" ).click(function() {
+	  ( this ).css( "border: 2px black" );
+	});
+
+</script>
