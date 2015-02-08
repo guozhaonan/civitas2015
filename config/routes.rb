@@ -8,6 +8,8 @@ Civitas2015::Application.routes.draw do
   root "pages#home"
   get "profile" => "pages#profile"
 
+  get "project" => "pages#project"
+
 
 
 

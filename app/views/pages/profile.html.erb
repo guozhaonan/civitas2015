@@ -12,15 +12,21 @@
 	}
 	.userinfo{
 		display:inline-block;
+		padding: 30px;
+		
 	}
 
 	.image {
-		background:url(https://unsplash.imgix.net/photo-1416339442236-8ceb164046f8?q=75&fm=jpg&s=8eb83df8a744544977722717b1ea4d09) no-repeat center center fixed;
+		background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),url(https://unsplash.imgix.net/photo-1416339442236-8ceb164046f8?q=75&fm=jpg&s=8eb83df8a744544977722717b1ea4d09) no-repeat center center fixed;
 		-webkit-background-size: cover;
     	-moz-background-size: cover;
       	-o-background-size: cover;
       	background-size: cover;
+      	padding:100px;
+      	color:white;
 	}
+
+
 
 </style>
 
@@ -29,17 +35,30 @@
 
 <header class="image">
 	<div class="container">
-		<div class="row">
+		<div class="row" style="position:relative; ">
 			<div class="col-md-6">
 				<div class="circle" ></div>
 				<div class="userinfo">
-					<h3 class="name">firstname lastname</h3>
+					<h3 class="username">firstname lastname</h3>
 					<h5 class="twitterhandle">@twitterhandle</h5>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<h5>Core skills</h5>
-				<h5>Developing skills</h5>
+				<div class="skills">	
+					<h3>Core skills</h3>
+					<div id="core-skills">
+						<span class="label label-primary">Primary</span>
+						<span class="label label-primary">Primary</span>
+					</div>
+				</div>
+				<div class="skills">
+					<h3>Developing skills</h3>
+					<div id="dev-skills">
+						<span class="label label-warning">Warning</span>
+					</div>
+				</div>
+				<div id="badges">
+				</div>
 			</div>
 		</div>
 	</div>
