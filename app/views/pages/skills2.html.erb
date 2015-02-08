@@ -4,7 +4,7 @@
 		border-radius:5px;
 		width:31%;
 		min-width:200px;
-		background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), no-repeat center center fixed;
+		background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(http://graphicdesigns.clbgraphic-designs.com/images/art1.jpg), no-repeat center center fixed;
 		-webkit-background-size: cover;
     	-moz-background-size: cover;
       	-o-background-size: cover;
@@ -18,7 +18,8 @@
 		position:relative;
 		top:140px;
 		font-size: 30px;
-		padding:10px;
+		background:#3B3A3C;
+		padding:7px;
 	}
 
 	.mybutton{
@@ -26,10 +27,11 @@
 	    color:white;
 	    border:none;
 	    float:right;
+
   	}
 
   	.selected{
-  		border:2px solid red;
+  		border:2px solid blue;
   	}
 
 
@@ -37,61 +39,60 @@
 
 
 <div class="container" style="text-align:center">
-
-	<h1>Tell us more.</h1>
-	<p>What are you already skilled at and what do you want to learn? Let us help you reach your goals.</p>
+	<div style="padding:40px">
+		<h1>Tell us more.</h1>
+		<p>What are you already skilled at and what do you want to learn? Let us help you reach your goals.</p>
+	</div>
 	<div class="panel panel-default">
 	  <div class="panel-body" style="text-align:left">
-	    <h2>Developing Skills</h2>
-	    <p>What new skills do you want to learn? Pick up to 3 skills.</p>
+	    <h4 style="text-align:center">Developing Skills</h4>
+	    <p style="text-align:center">What new skills do you want to learn? Pick up to 3 skills.</p>
 	    <div class="well" id="allskills">
 
-			<div class="skilltype  selected">
+			<div class="skilltype selected">
 				<div class="skill">Graphic Design</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR58KHkh_oxYdZRgPiV6zKNC3gF5fxbr2ot5ygmJBSw_j0xJs-7);">
 				<div class="skill">iOS Development</div>
 			</div>
-				
-			<div class="skilltype">
+
+			<div class="skilltype" style="background-image:url(http://cornbreaddesign.com/wp-content/uploads/2012/11/web-design-woodland-park.jpg);">
 				<div class="skill">Web Design</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://jimatkinsonwebdesign.co.uk/wp-content/uploads/2011/10/Wirefame-diagram.jpg);">
 				<div class="skill">Front End Dev</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://foto-ruta.com/wp-content/uploads/2012/06/Picture-1.png);">
 				<div class="skill">Photography</div>
 			</div>
 
-			<div class="skilltype selected">
+			<div class="skilltype selected" style="background-image:url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSH3RaG7lsXUA_sDTx2jGbIi-pqRORJnm6hSvLQl4BltEXEVoQe4Q);">
 				<div class="skill">Spanish</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://www.dsgnone.com/assets/img/web-design-agency-london-banner1.jpg);">
 				<div class="skill">Android</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://www.seoworks.com/wp-content/uploads/2012/02/SEOWBL-SEO-copywriting-tips-630-312.jpg);">
 				<div class="skill">Copywriting</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://www.tamponsandteacakes.com/wp-content/uploads/2013/07/IMG_0566.jpg);">
 				<div class="skill">Portugese</div>
 			</div>
-
-
-			<div class="skilltype">
-				<div class="skill">Back End Dev</div>
+			<div class = "skilltype" style="background-image:url(http://www.kinvey.com/blog/images/2013/01/kinvey_backend-as-a-service_mobileecosystem_jan-18-2013_2100px.png);">
+				<div class="skill" >Back End Dev</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://cdn2.hubspot.net/hub/164795/file-1908357391-jpg/5-Keys-to-B2B-Marketing-Automation.jpg);">
 				<div class="skill">Marketing</div>
 			</div>
 
-			<div class="skilltype">
+			<div class="skilltype" style="background-image:url(http://woodworkinghelper.org/wp-content/uploads/2013/06/woodworking.jpg);">
 				<div class="skill">Woodworking</div>
 			</div>
 		</div>
@@ -103,12 +104,15 @@
 	var counter=0;
 
 	$( ".skilltype" ).on("click", function() {
+
 			console.log("click!")
 			console.log(this)
-			if (counter<3) {
-	  			$(this).css({ border: "2px solid black"} );	
+			if (counter<2) {
+	  			$(this).css({ border: "2px solid rgb(242, 98, 113)"} );	
 	  			counter++;
 	  		}
+
 	});
 
+</script>
 </script>
