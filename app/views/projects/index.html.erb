@@ -63,6 +63,14 @@
     margin-bottom:5px;
   }
 
+  .divider{ 
+    margin-top:20px;
+    width:100%;
+    height:1px;
+    background:#a7a9ab;
+    margin-bottom:20px;
+    }
+
 
 </style>
 
@@ -70,7 +78,7 @@
   <%= image_tag("logo-text.png", style:"max-height:80px; width:auto; z-index:999; margin:10px;") %>
   <div style="width:100%; height:2px; background:#2ABB9B"></div>
   <ul>
-    <li><%= link_to "Desktop", "http://localhost:3000/", style:"color:white; text-decoration:none"%></li>
+    <li><%= link_to "Dashboard", "http://localhost:3000/", style:"color:white; text-decoration:none"%></li>
     <li><%= link_to "Create a Project", "http://localhost:3000/projects/new", style:"color:white; text-decoration:none" %></li>
     <li class="sidebar-active"><%= link_to "Find a Project", "http://localhost:3000/projects/", style:"color:white; text-decoration:none" %></li>
   </ul>
@@ -79,36 +87,39 @@
 
 <div class="container">
 
-  <h1>Find a Project!</h1>
-  <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default", style: "float:left" %></div>
+  <h1>Find a Project</h1>
+  <p>Pick an existing project, or create a new one!</p>
+  <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default" %></div>
+  <div class="divider">
 
-  <% @projects.each do |project| %>
-    <div class="panel panel-default card">
-      <div class="panel-body" >
-            <h2><%= project.title %></h2>
-            <div class="image"></div>
-            <p style="margin-top:10px"><%= project.description %></p>
-            <h3>Project Requirements</h3>
-            <div >
-              <div id="core-skills" class="tags">
-                <span class="label label-primary">Primary</span>
-                <span class="label label-primary">Primary</span>
+  <div>
+    <% @projects.each do |project| %>
+      <div class="panel panel-default card">
+        <div class="panel-body" >
+              <h2><%= project.title %></h2>
+              <div class="image"></div>
+              <p style="margin-top:10px"><%= project.description %></p>
+              <h3>Project Requirements</h3>
+              <div >
+                <div id="core-skills" class="tags">
+                  <span class="label label-primary">Primary</span>
+                  <span class="label label-primary">Primary</span>
+                </div>
+                <div id="developing-skills" class="tags">
+                  <span class="label label-warning">Warning</span>
+                  <span class="label label-warning">Warning</span>
+                </div>
               </div>
-              <div id="developing-skills" class="tags">
-                <span class="label label-warning">Warning</span>
-                <span class="label label-warning">Warning</span>
+              <div style="padding:20px 0">
+                <%= link_to "Join", project, class: "mybutton btn btn-lg btn-default" %>
+                <div style="float:right"><%= link_to 'Edit', edit_project_path(project) %>
+                <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
               </div>
-            </div>
-            <div style="padding:20px 0">
-              <%= link_to "Join", project, class: "mybutton btn btn-lg btn-default" %>
-              <div style="float:right"><%= link_to 'Edit', edit_project_path(project) %>
-              <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-            </div>
 
+        </div>
       </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
 
 
   
