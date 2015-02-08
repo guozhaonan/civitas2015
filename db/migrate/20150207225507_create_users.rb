@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :token
       t.string :secret
       t.string :profile_image
+      t.string :handle
+      t.string :bio
 
       t.timestamps null: false
     end

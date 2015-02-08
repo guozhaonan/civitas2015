@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20150208012830) do
     t.string   "token"
     t.string   "secret"
     t.string   "profile_image"
+    t.string   "handle"
+    t.string   "bio"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
