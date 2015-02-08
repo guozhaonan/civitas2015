@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :projects
   def self.find_or_create_from_auth_hash(auth_hash)
     user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create
     user.update(
@@ -11,7 +12,6 @@ class User < ActiveRecord::Base
     )
     user
   end
-
   def twitter
     @client ||= Twitter::REST::Client.new do |config|
       config.consumer_key        = Rails.application.secrets.twitter_api_key
