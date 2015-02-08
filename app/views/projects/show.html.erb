@@ -44,7 +44,6 @@
   <div class="container">
     <div class="row" style="position:relative; ">
       <div class="col-md-6">
-        <div class="circle" ></div>
         <div class="projectinfo">
           <h3 id="projectname"><%= @project.title %></h3>
           <h5 id="projecttags">#thistag #thattag</h5>
@@ -54,15 +53,16 @@
         <div class="skills">
           <h3>Core skills</h3>
           <div id="core-skills">
-            <span class="label label-primary">Primary</span>
-            <span class="label label-primary">Primary</span>
+            <span class="label label-primary"><%= @project.coreValue1 %></span>
+            <span class="label label-primary"><%= @project.coreValue2 %></span>
+            <span class="label label-primary"><%= @project.coreValue3 %></span>
           </div>
         </div>
         <div class="skills">
           <h3>Developing skills</h3>
           <div id="dev-skills">
-            <span class="label label-warning">Warning</span>
-          </div>
+            <span class="label label-warning"><%= @project.developingSkills %></span>
+        </div>
         </div>
         <div id="badges">
         </div>
@@ -90,7 +90,7 @@
           <td></td>
         </tr>
         <tr>
-          <td>Derp McDerpsome</td>
+          <td><%= @project.partner %></td>
           <td>Herping the derp</td>
           <td>Derping</td>
           <td><input type="checkbox" checked></td>

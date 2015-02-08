@@ -1,7 +1,7 @@
 <style>
   .mybutton{
-    background:#f26271; 
-    color:white; 
+    background:#f26271;
+    color:white;
     border:none;
   }
 
@@ -13,7 +13,7 @@
   }
 
   .image{
-    
+
     height:150px;
     width:90%;
     border-radius:5px;
@@ -41,7 +41,7 @@
   <% @projects.each do |project| %>
     <div class="panel panel-default card">
       <div class="panel-body" >
-            <h2>Project title</h2>
+            <h2><%= project.title %></h2>
             <div class="image"></div>
             <p style="margin-top:10px"><%= project.description %></p>
             <h3>Project Requirements</h3>
@@ -60,11 +60,11 @@
               <div style="float:right"><%= link_to 'Edit', edit_project_path(project) %>
               <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
             </div>
-            
+
       </div>
     </div>
   <% end %>
-        
+
 
 
   <div style="display:block;"><%= link_to 'New Project', new_project_path, class: "mybutton btn btn-lg btn-default", style: "float:right" %></div>

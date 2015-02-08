@@ -1,3 +1,4 @@
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,13 +12,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208091848) do
+ActiveRecord::Schema.define(version: 20150208121324) do
 
   create_table "projects", force: true do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "partner"
+    t.string   "coreValue1"
+    t.string   "coreValue2"
+    t.string   "coreValue3"
+    t.string   "developingSkills"
   end
 
   create_table "taggings", force: true do |t|
@@ -61,3 +67,4 @@ ActiveRecord::Schema.define(version: 20150208091848) do
   end
 
 end
+>>>>>>> Stashed changes
