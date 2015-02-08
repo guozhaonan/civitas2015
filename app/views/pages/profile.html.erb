@@ -117,10 +117,10 @@
 	<div class="container">
 		<div class="row" style="position:relative; ">
 			<div class="col-md-6">
-				<div class="circle" ></div>
+				<img class="img-circle" src ="<%= current_user.profile_image %>">
 				<div class="userinfo">
-					<h3 class="username">firstname lastname</h3>
-					<h5 class="twitterhandle">@twitterhandle</h5>
+					<h3 class="username"><%= current_user.name %></h3>
+					<h5 class="twitterhandle">@<%= current_user.handle %></h5>
 				</div>
 			</div>
 			<div class="col-md-6">
